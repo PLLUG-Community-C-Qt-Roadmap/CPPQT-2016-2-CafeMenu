@@ -9,7 +9,14 @@
 class MenuItem : public AbstractMenuItem
 {
 public:
-    MenuItem(const std::string &title);
+    MenuItem(const std::string &title,
+        double price);
+
+    double price() const;
+    void setPrice(double price);
+
+private:
+    double mPrice;
 };
 
 #endif // MENUITEM_H

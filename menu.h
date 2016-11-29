@@ -1,6 +1,9 @@
 #ifndef MENU_H
 #define MENU_H
 
+#include <vector>
+#include <memory>
+
 #include "abstractmenuitem.h"
 
 /*!
@@ -10,6 +13,14 @@ class Menu : public AbstractMenuItem
 {
 public:
     Menu(const std::string &title);
+
+    int count() const;
+    AbstractMenuItem *at(int index) const;
+
+    void append(std::unique_ptr<AbstractMenuItem> item);
+
+private:
+    std::vector<std::unique_ptr<AbstractMenuItem>> mListItems;
 };
 
 #endif // MENU_H
