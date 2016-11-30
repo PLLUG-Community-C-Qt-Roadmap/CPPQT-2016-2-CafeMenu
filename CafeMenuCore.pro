@@ -6,9 +6,11 @@ CONFIG -= qt
 SOURCES += main.cpp \
     abstractmenuitem.cpp \
     menuitem.cpp \
-    menu.cpp
+    menu.cpp \
+    visitor.cpp
 
 HEADERS += \
     abstractmenuitem.h \
     menuitem.h \
-    menu.h
+    menu.h \
+    visitor.h

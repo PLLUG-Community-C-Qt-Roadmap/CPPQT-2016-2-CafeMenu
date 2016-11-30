@@ -17,6 +17,10 @@ public:
 
 private:
     double mPrice;
+
+    // AbstractMenuItem interface
+public:
+    virtual void apply(Visitor *visitor) override;
 };
 
 #endif // MENUITEM_H

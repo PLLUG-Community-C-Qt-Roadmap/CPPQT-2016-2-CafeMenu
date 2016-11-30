@@ -1,5 +1,7 @@
 #include "menu.h"
 
+#include "visitor.h"
+
 /*!
  * \brief Public constructor.
  * \param title Menu title.
@@ -32,4 +34,12 @@ AbstractMenuItem *Menu::at(int index) const
 void Menu::append(std::unique_ptr<AbstractMenuItem> item)
 {
     mListItems.push_back(std::move(item));
+}
+
+void Menu::apply(Visitor *visitor)
+{
+    if (visitor)
+    {
+        visitor->visit(this);
+    }
 }

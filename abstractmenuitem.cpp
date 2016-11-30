@@ -4,7 +4,7 @@
  * \brief Public constructor.
  * \param title Menu title.
  */
-AbstractMenuItem::AbstractMenuItem(const std::__cxx11::string &title)
+AbstractMenuItem::AbstractMenuItem(const std::string &title)
     : mTitle{title}
 {
 
@@ -18,3 +18,4 @@ std::__cxx11::string AbstractMenuItem::title() const
 {
     return mTitle;
 }
+

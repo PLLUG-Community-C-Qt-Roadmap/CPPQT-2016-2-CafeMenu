@@ -21,6 +21,10 @@ public:
 
 private:
     std::vector<std::unique_ptr<AbstractMenuItem>> mListItems;
+
+    // AbstractMenuItem interface
+public:
+    virtual void apply(Visitor *visitor) override;
 };
 
 #endif // MENU_H

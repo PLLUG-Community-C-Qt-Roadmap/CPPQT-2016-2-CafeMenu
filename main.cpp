@@ -2,15 +2,12 @@
 
 #include "menu.h"
 #include "menuitem.h"
+#include "visitor.h"
 
-void output(auto menu)
+void output(AbstractMenuItem* menu)
 {
-    for (int i = 0; i < menu->count(); ++i)
-    {
-        std::cout << menu->at(i)->title() << std:: endl;
-//        menu->at(i)->name();
-
-    }
+    Visitor v;
+    menu->apply(&v);
 }
 
 int main(int argc, char *argv[])
